@@ -21,7 +21,7 @@ echo -e "Installing mysql"
 yum -y install mysql mysql-server
 chkconfig mysqld on
 service mysqld start
-
+#can thay doi khi setup server moi
 mysql_secure_installation <<EOF
 nguyenchan
 n
@@ -49,6 +49,7 @@ echo -e "Install phpmyadmin"
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
 yum -y install epel-release
 yum -y install phpmyadmin
+#doan sau dang bi loi~
 sed -i '/<Directory "/usr/share/phpmyadmin">/,/</Directory>/c\
 #<Directory "/usr/share/phpmyadmin">\
 #  Order Deny,Allow\
