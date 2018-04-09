@@ -23,9 +23,8 @@ chkconfig mysqld on
 service mysqld start
 
 mysql_secure_installation <<EOF
-y
-somepass
-somepass
+nguyenchan
+n
 y
 y
 y
