@@ -4,7 +4,7 @@
 #   Description:  Yum Install LAMP(Linux + Apache + MySQL + PHP )          #
 #==========================================================================#
 
-clear
+
 echo -e "update packages"
 yum update
 echo -e "update completed!"
