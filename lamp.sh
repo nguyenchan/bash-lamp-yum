@@ -22,13 +22,14 @@ yum -y install mysql mysql-server
 chkconfig mysqld on
 service mysqld start
 
-DATABASE_PASS = ""
-mysqladmin -u root password "$DATABASE_PASS"
-mysql -u root -p"$DATABASE_PASS" -e "UPDATE mysql.user SET Password=PASSWORD('nguyenchan') WHERE User='root'"
-mysql -u root -p"$DATABASE_PASS" -e "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1')"
-mysql -u root -p"$DATABASE_PASS" -e "DELETE FROM mysql.user WHERE User=''"
-mysql -u root -p"$DATABASE_PASS" -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%'"
-mysql -u root -p"$DATABASE_PASS" -e "FLUSH PRIVILEGES"
+rootpass = "nguyenchan"
+mysql -u root <<-EOF
+UPDATE mysql.user SET Password=PASSWORD('$rootpass') WHERE User='root';
+DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+DELETE FROM mysql.user WHERE User='';
+DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
+FLUSH PRIVILEGES;
+EOF
 
 
 echo "Start Installing PHP..."
