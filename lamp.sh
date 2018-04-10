@@ -15,10 +15,11 @@ chkconfig httpd on
 mkdir -p /data/www/html
 chown -R apache:apache /data/www/html
 
-iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
-service iptables restart
+/sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+/etc/rc.d/init.d/iptables saveservice iptables restart
 
 service httpd start
+
 echo "Apache Install completed!"
 
 echo -e "Installing mysql"
@@ -27,10 +28,8 @@ chkconfig mysqld on
 service mysqld start
 #Chú ý thay đổi rootpassword cho phù hợp
 mysql_secure_installation <<EOF
- 
-y
-rootpassword
-rootpassword
+nguyenchan
+n
 y
 y
 y
