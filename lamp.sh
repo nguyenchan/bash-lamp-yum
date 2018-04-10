@@ -14,6 +14,10 @@ yum -y install httpd
 chkconfig httpd on
 mkdir -p /data/www/html
 chown -R apache:apache /data/www/html
+
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+service iptables restart
+
 service httpd start
 echo "Apache Install completed!"
 
@@ -21,10 +25,12 @@ echo -e "Installing mysql"
 yum -y install mysql mysql-server
 chkconfig mysqld on
 service mysqld start
-#can thay doi khi setup server moi
+#Chú ý thay đổi rootpassword cho phù hợp
 mysql_secure_installation <<EOF
-nguyenchan
-n
+ 
+y
+rootpassword
+rootpassword
 y
 y
 y
@@ -44,13 +50,25 @@ phpinfo();
 ?>
 EOF
 
+echo "Updating php..."
+rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+yum remove php-common -y
+yum install php56w -y
+yum install php56w-mysql -y
+yum install php56w-common -y
+yum install php56w-pdo -y
+yum install php56w-opcache -y
+echo "Update completed!"
+
 
 echo -e "Install phpmyadmin"
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
 yum -y install epel-release
 yum -y install phpmyadmin
-#doan sau dang bi loi~
-sed -i '/<Directory "/usr/share/phpmyadmin">/,/</Directory>/c\
+
+sed -i -e 's/127.0.0.1/all/g' /etc/httpd/conf.d/phpMyAdmin.conf
+
+#sed -i '/<Directory "/usr/share/phpmyadmin">/,/</Directory>/c\
 #<Directory "/usr/share/phpmyadmin">\
 #  Order Deny,Allow\
 #  Deny from all\
@@ -58,3 +76,5 @@ sed -i '/<Directory "/usr/share/phpmyadmin">/,/</Directory>/c\
 #</Directory>' /etc/httpd/conf.d/phpMyAdmin.conf
 
 /etc/init.d/httpd restart
+
+echo -e "Done"
