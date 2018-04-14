@@ -28,8 +28,10 @@ chkconfig mysqld on
 service mysqld start
 #Chú ý thay đổi rootpassword cho phù hợp
 mysql_secure_installation <<EOF
+
+y
 nguyenchan
-n
+nguyenchan
 y
 y
 y
