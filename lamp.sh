@@ -3,8 +3,8 @@
 #   System Required:  CentOS 6+                                            #
 #   Description:  Yum Install LAMP(Linux + Apache + MySQL + PHP )          #
 #==========================================================================#
-
-
+#
+  
 echo -e "update packages"
 yum update
 echo -e "update completed!"
