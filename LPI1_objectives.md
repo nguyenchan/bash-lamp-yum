@@ -20,7 +20,7 @@ List all modules matching the given wildcard (or "*" if no wildcard is given). T
 * -a --all
 insert all module on the command line
 
-###modinfo
+### modinfo
 liệt kê các thông tin về 1 module
 
 ###/sys 
