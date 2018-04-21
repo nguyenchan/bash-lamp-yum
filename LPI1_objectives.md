@@ -1,5 +1,5 @@
 #101
-
+##101.1
 yum -y install pciutils
 lspci
 yum -y install usbutils
@@ -35,7 +35,9 @@ Chứa đựng thông tin về quá trình xử lý của hệ thống.
 
 Ví dụ: /proc/cpuinfo cung cấp cho ta thông số kỹ thuật của CPU. Để xem dùng lệnh cat: $cat /proc/cpuinfo
 
-
-
 ###/dev
 Các file thiết bị - nơi lưu trữ các phân vùng ổ cứng, thiết bị ngoại vi như usb, ổ đĩa cắm ngoài hay bất cứ thiết bị nào được gán vào hệ thống.
+
+##101.2
+###dmesg
+xem lại các thông báo trong quá trình khởi động
