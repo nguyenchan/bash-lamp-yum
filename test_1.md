@@ -18,6 +18,10 @@ chkconfig --list
 swapoff -a
 
 ###Xac dinh server dung BIOS boot hay UEFI boot
+dmesg | grep "EFI v"
+nếu không có kết quả trả về  là bios boot
+nếu có kết quả [ 0.000000] EFI v2.00 by American Megatrends là UEFI boot
+hoặc kiểm tra nếu tồn tại thư mục /sys/firmware/efi là uefi boot
 
 ###Flush cache
 free && sync && echo 3 > /proc/sys/vm/drop_caches && free
@@ -91,3 +95,10 @@ ethtool eth0 | grep Speed
 ###Xac dinh file systems type
 lsblk -f
 blkid
+
+
+###Cpanel
+Port 2087: Đây là port truy cập vào trang quản lý cPanel dành cho System Admin
+Port 2083: Đây là port truy cập vào trang quản lý Host dành cho người dùng
+Port 2093: Đây là Port truy cập vào dịch vụ Email Hosting dành cho người dùng
+Port 995, 465: mail server
