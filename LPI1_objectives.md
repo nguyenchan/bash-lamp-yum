@@ -41,3 +41,25 @@ Các file thiết bị - nơi lưu trữ các phân vùng ổ cứng, thiết b�
 ## 101.2
 ### dmesg
 xem lại các thông báo trong quá trình khởi động
+
+### bootloader
+ 1. power on (Power-on Self-test)
+ 2. MBR 
+ 3. Bootloader GRUB (or LILO)
+ 4. Linux kernel
+ 5. Init
+
+### initramfs
+
+### init
+PID = 1
+tiến trình khởi chạy đầu tiên, cha của tất cả các tiến trình khác
+có 3 kiểu tiến trình init:
+ * system V (sysV) : phiên bản truyền thống trên các hệ thống linux cũ
+ * upstart: được phát triển và sử dùng bởi ubuntu năm 2009 và sử dùng trong các bản ubuntu cũ hơn 15.04
+ * systemd: là một init system được phát triển vào khoảng 2010 và được nhiều phiên bản linux sử dụng để thay thế các init system cũ. Ubuntu từ 15.04 và centos từ 7.0 đã sử sụng systemd làm init system mặc định.
+
+### sysVinit
+
+### systemd 
+
