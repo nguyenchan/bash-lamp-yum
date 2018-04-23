@@ -50,6 +50,7 @@ xem lại các thông báo trong quá trình khởi động
  5. Init
 
 ### initramfs
+được nạp vào hệ thống sau khi load xong kernel và trước khi chạy init
 
 ### init
 PID = 1
@@ -60,6 +61,20 @@ có 3 kiểu tiến trình init:
  * systemd: là một init system được phát triển vào khoảng 2010 và được nhiều phiên bản linux sử dụng để thay thế các init system cũ. Ubuntu từ 15.04 và centos từ 7.0 đã sử sụng systemd làm init system mặc định.
 
 ### sysVinit
+ * 0: half
+ * 1: single-user
+ * 2: multi-user
+ * 3: multi-user with networking
+ * 4: undefind (user defind)
+ * 5: multi-user with display manager (graphical login)
+ * 6: reboot
 
 ### systemd 
+trong systemd khái niệm "runlevels" được thay thế bằng các targets để boot vào như sau:
+ * poweroff.target - shutdown system
+ * rescue.target - single user mode
+ * multi-user.target - multiuser with networking
+ * graphical.target - multiuser with networking and GUI
+ * reboot.target - restart
+
 
