@@ -45,7 +45,11 @@ xem lại các thông báo trong quá trình khởi động
 ### bootloader
  1. power on (Power-on Self-test)
  2. MBR 
- 3. Bootloader GRUB (or LILO)
+ 3. Bootloader GRUB (or LILO):
+  LILO không có giao diện commandline tương tác như GRUB
+  LILO không hỗ trợ boot từ network như GRUB
+  GRUB hỗ trợ load nhiều OS khác nhau
+  GRUB load 2 stages (MBR, GRUB bootloader)
  4. Linux kernel
  5. Init
 
