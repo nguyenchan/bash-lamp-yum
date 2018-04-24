@@ -121,3 +121,18 @@ giống init
 Thuộc nhóm chương trình system and service manager - nó quản lý (start/stop/restart) các service chạy trên máy từ lúc bật máy lên cho tới lúc tắt máy.
 Nó cũng quản lý luôn cả hệ thống (system) cụ thể là các công việc: set tên máy(hostname), cấu hình loopback interface (lo trong output của lệnh `ip addr`), thiết lập mount các filesystem như /sys/proc ..
 systemd thường là process đầu tiên được chạy sau khi bật máy (PID = 1) và còn được gọi là init system giống như Upstart trên Ubuntu 14.04, launchd của OSX, supervisor viết bằng python, SysV trên các hệ thống linux cũ.
+
+### systemctl
+Câu lệnh dùng để giám sát và điều khiển systemd, cụ thể nó sẽ tương tác với các unit 
+systemctl list-units
+systemctl -t service
+systemctl status
+
+- /usr/lib/systemd/system/: units provided by installed packages
+- /etc/systemd/system/: units installed by the system administrator
+
+### wall
+Gửi tin nhắn tới user trong hệ thống.
+wall [-n] [-t TIMEOUT] [file]
+-n, --nobaner: không hiện banner
+
