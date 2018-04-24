@@ -88,3 +88,16 @@ CHứa config hệ thống sẽ làm gì khi khởi động
 `id:3:initdefault:`
 
 runlevel mặc định là lvl 3: Full multiuser mode
+
+### shutdown [-akrhPHfFnc] [-t sec] time [message]
+ * -a:
+ * -k: không shutdown nhưng sẽ cảnh báo khi ai đó shutdown hệ thống
+ * -r: reboot sau khi shutdown
+ * -h: shutdown và giữ trạng thái halt (tắt CPU)
+ * -P: shutdown và ngắt điện từ nguồn
+ * -H:
+ * -f:
+ * -F: 
+ * -n: 
+ * -c: huỷ lệnh shutdown đang chờ
+ * -t: đợi t giây trước khi shutdown
