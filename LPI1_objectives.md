@@ -100,4 +100,13 @@ runlevel mặc định là lvl 3: Full multiuser mode
  * time: thời gian thực hiện shutdown trong ngày (0-23h)
  * message: tin nhắn đến tất cả user trước khi shutdown
 
+### init [runlevel]
+dùng để thay đổi runlevel
+- Run level 0 (init 0): chế độ tắt máy.
+- Run level 1 (init 1): chế độ này chỉ sử dụng được 1 người dùng.
+- Run level 2 (init 2): chế độ đa người dùng nhưng không có dịch vụ NFS.
+- Run level 3 (linit 3): chế độ đa người dùng, có đầy đủ các dịch vụ.
+- Run level 4 (linit 4): người dùng định nghĩa
+- Run level 5 (linit 5): chế độ đồ họa.
+- Run level 6 (linit 6): khởi động lại máy.
 
