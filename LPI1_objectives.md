@@ -118,3 +118,6 @@ Các file trong này là shell script dùng để start, stop, restart các serv
 giống init
 
 ### systeamd
+Thuộc nhóm chương trình system and service manager - nó quản lý (start/stop/restart) các service chạy trên máy từ lúc bật máy lên cho tới lúc tắt máy.
+Nó cũng quản lý luôn cả hệ thống (system) cụ thể là các công việc: set tên máy(hostname), cấu hình loopback interface (lo trong output của lệnh `ip addr`), thiết lập mount các filesystem như /sys/proc ..
+systemd thường là process đầu tiên được chạy sau khi bật máy (PID = 1) và còn được gọi là init system giống như Upstart trên Ubuntu 14.04, launchd của OSX, supervisor viết bằng python, SysV trên các hệ thống linux cũ.
