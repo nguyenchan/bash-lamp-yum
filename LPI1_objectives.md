@@ -81,4 +81,8 @@ trong systemd khái niệm "runlevels" được thay thế bằng các targets �
  * graphical.target - multiuser with networking and GUI
  * reboot.target - restart
 
-
+## 101.3
+### /etc/inittab
+CHứa config hệ thống sẽ làm gì khi khởi động
+`id:3:initdefault:`
+runlevel mặc định là lvl 3: Full multiuser mode
