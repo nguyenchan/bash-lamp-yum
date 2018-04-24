@@ -110,3 +110,7 @@ dùng để thay đổi runlevel
 - Run level 5 (linit 5): chế độ đồ họa.
 - Run level 6 (linit 6): khởi động lại máy.
 
+### /etc/init.d/ 
+Chứa các script sử dụng bởi SysVinit, đây là cách quản lý các gói dịch vụ truyền thống của linux.
+Các file trong này là shell script dùng để start, stop, restart các service.
+
