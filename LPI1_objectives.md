@@ -114,3 +114,7 @@ dùng để thay đổi runlevel
 Chứa các script sử dụng bởi SysVinit, đây là cách quản lý các gói dịch vụ truyền thống của linux.
 Các file trong này là shell script dùng để start, stop, restart các service.
 
+### telinit
+giống init
+
+### systeamd
