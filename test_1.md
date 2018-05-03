@@ -92,7 +92,7 @@ COMMAND: Tên của Process.
 
 10. 
 ### điểm khác nhau khi connect địac chỉ mysql 127.0.0.1 với địa chỉ public
-loopback nhanh hơn
+local loopback không đi qua network interface nên nhanh hơn
 
 
 ~~
