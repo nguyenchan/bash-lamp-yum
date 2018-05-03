@@ -89,6 +89,9 @@ COMMAND: Tên của Process.
 
 ### sed
 ### Tìm tất cả các file *.php và chown thành owner nhanvien
+### khác nhau giữa locate và which 
+locate dùng build database gần nhất để tìm tất cả filename chứa từ khoá
+which tìm full đường dẫn của lệnh shell
 
 10. 
 ### điểm khác nhau khi connect địac chỉ mysql 127.0.0.1 với địa chỉ public
