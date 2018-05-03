@@ -104,7 +104,7 @@ lsblk -f
 blkid
 
 
-###Cpanel
+### Cpanel
 Port 2087: Đây là port truy cập vào trang quản lý cPanel dành cho System Admin
 Port 2083: Đây là port truy cập vào trang quản lý Host dành cho người dùng
 Port 2093: Đây là Port truy cập vào dịch vụ Email Hosting dành cho người dùng
