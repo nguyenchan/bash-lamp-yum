@@ -93,6 +93,13 @@ COMMAND: Tên của Process.
 locate dùng build database gần nhất để tìm tất cả filename chứa từ khoá
 which tìm full đường dẫn của lệnh shell
 
+### mysqldump backup and restore 1 DB mysql
+ // mysqldump --all-databases --no-create-info > dump-data.sql
+ // mysql < dump-data.sql // mysql> source dump-data.sql
+mysqldump --databases user_test > dump-data_user_test.sql
+mysql user_test < dump-data_user_test.sql
+
+
 10. 
 ### điểm khác nhau khi connect địac chỉ mysql 127.0.0.1 với địa chỉ public
 local loopback không đi qua network interface nên nhanh hơn
