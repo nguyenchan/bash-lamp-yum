@@ -1,6 +1,6 @@
 # xu ly chuoi
 
-1. 
+## 1.  
 ### Liet ke cac thiet bi dang cam qua giao dien PCI (hoac USB)
 ```sh
 yum -y install pciutils
