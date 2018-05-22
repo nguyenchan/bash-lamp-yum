@@ -55,8 +55,10 @@ env | grep NC
 ### Lệnh xem kernel ver
 uname -r
 ### In ra danh sách 5 user cuối cùng từ file /etc/passwd
+awk -F: '{print $1}' /etc/passwd | tail -5
 
-8. ### Lọc file log liệt kê IP truy cập có status code 200, danh sách không trùng
+8. 
+### Lọc file log liệt kê IP truy cập có status code 200, danh sách không trùng
 awk '{if ($9=="200") print $1, $9}' testlog | sort -n -u
 
 9. 
@@ -99,10 +101,16 @@ which tìm full đường dẫn của lệnh shell
 mysqldump --databases user_test > dump-data_user_test.sql
 mysql user_test < dump-data_user_test.sql
 
+### xem thong tin lenh
+lenh -h
+man <lenh>
 
 10. 
 ### điểm khác nhau khi connect địac chỉ mysql 127.0.0.1 với địa chỉ public
 local loopback không đi qua network interface nên nhanh hơn
+
+### TRường nào trong http response header diễn tả kích thước file
+content-length
 
 
 ~~
